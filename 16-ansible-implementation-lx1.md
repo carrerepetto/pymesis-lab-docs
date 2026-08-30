@@ -2,7 +2,7 @@
 title: 16-ansible-implementation-lx1
 description: ansible
 published: 1
-date: 2026-08-30T12:07:15.345Z
+date: 2026-08-30T19:15:33.827Z
 tags: 
 editor: markdown
 dateCreated: 2026-08-30T12:07:15.345Z
@@ -11,7 +11,7 @@ dateCreated: 2026-08-30T12:07:15.345Z
 # Project 16 — Ansible Implementation (lx1)
 
 **Previous:** [Project 15 — K3s Single-Node Installation (k3s1)](15-k3s-single-node-k3s1.md)
-**Next:** [Project 17 — Terraform/IaC Implementation (lx1)]()
+**Next:** [Project 17 — Terraform/IaC Implementation (lx1)](17-terraform-iac-lx1.md)
 
 [← Back to Lab Index](00-pymesis-lab-index.md)
 

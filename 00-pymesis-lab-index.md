@@ -2,7 +2,7 @@
 title: 00-pymesis-lab-index
 description: index
 published: 1
-date: 2026-08-30T12:16:03.905Z
+date: 2026-08-30T19:14:41.829Z
 tags: 
 editor: markdown
 dateCreated: 2026-08-27T16:50:59.053Z
@@ -12,7 +12,7 @@ dateCreated: 2026-08-27T16:50:59.053Z
 
 ## Lab Objective
 
-pymesis.lab is a professional-grade homelab built to close skill gaps in areas where prior experience (15+ years in sysadmin, AMS, ERP, and database administration) was weaker: **Kubernetes/K8s, Infrastructure as Code (Terraform/Ansible), and CI/CD**. The stated goal isn't just "having servers running" — it's documenting every technical decision, every problem solved, and the reasoning behind it, so the result serves both as skills evidence for a public GitHub portfolio/CV and as useful study material for junior and senior profiles alike.
+pymesis.lab is a professional-grade homelab built to close skill gaps in areas where prior experience (20+ years in sysadmin, AMS, ERP, and database administration) was weaker: **Kubernetes/K8s, Infrastructure as Code (Terraform/Ansible), and CI/CD**. The stated goal isn't just "having servers running" — it's documenting every technical decision, every problem solved, and the reasoning behind it, so the result serves both as skills evidence for a public GitHub portfolio/CV and as useful study material for junior and senior profiles alike.
 
 ## General Architecture
 
@@ -58,8 +58,8 @@ The lab's path follows the actual chronological installation order. Each documen
 | 14 | [Private LLM & N8N Installation](14-private-llm-llm1.md) | llm1, n8n |
 | 15 | [K3s Single-Node Installation](15-k3s-single-node-k3s1.md) | k3s1 |
 | 16 | [Ansible Implementation](16-ansible-implementation-lx1.md) | lx1 |
-| 17 | [Terraform/IaC Implementation]() | lx1 |
-| 18 | [Ansible Vault Implementation]() | lx1 |
+| 17 | [Terraform/IaC Implementation](17-terraform-iac-lx1.md) | lx1 |
+| 18 | [Ansible Vault Implementation](18-ansible-vault-secrets-lx1.md) | lx1 |
 | 19 | [HashiCorp Vault with Dynamic PKI]() | vault1 |
 | 20 | [Oracle XE Sandbox (RMAN + Restic)]() | ora1 |
 | 21 | [IBM DB2 on Docker]() | lx1 |
