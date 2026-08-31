@@ -2,7 +2,7 @@
 title: 18-ansible-vault-secrets-lx1
 description: ansible-vault-secrets
 published: 1
-date: 2026-08-30T19:13:21.297Z
+date: 2026-08-31T11:16:59.953Z
 tags: 
 editor: markdown
 dateCreated: 2026-08-30T19:13:21.297Z
@@ -11,7 +11,7 @@ dateCreated: 2026-08-30T19:13:21.297Z
 # Project 18 — Ansible Vault Secrets Audit & Migration (lx1, fleet-wide)
 
 **Previous:** [Project 17 — Terraform/IaC (lx1)](17-terraform-iac-lx1.md)
-**Next:** [Project 19 — HashiCorp Vault (vault1)]()
+**Next:** [Project 19 — HashiCorp Vault (vault1)](19-hashicorp-vault-vault1.md)
 
 [← Back to Lab Index](00-pymesis-lab-index.md)
 

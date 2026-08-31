@@ -2,7 +2,7 @@
 title: 00-pymesis-lab-index
 description: index
 published: 1
-date: 2026-08-30T19:14:41.829Z
+date: 2026-08-31T11:17:28.362Z
 tags: 
 editor: markdown
 dateCreated: 2026-08-27T16:50:59.053Z
@@ -60,7 +60,7 @@ The lab's path follows the actual chronological installation order. Each documen
 | 16 | [Ansible Implementation](16-ansible-implementation-lx1.md) | lx1 |
 | 17 | [Terraform/IaC Implementation](17-terraform-iac-lx1.md) | lx1 |
 | 18 | [Ansible Vault Implementation](18-ansible-vault-secrets-lx1.md) | lx1 |
-| 19 | [HashiCorp Vault with Dynamic PKI]() | vault1 |
+| 19 | [HashiCorp Vault with Dynamic PKI](19-hashicorp-vault-vault1.md) | vault1 |
 | 20 | [Oracle XE Sandbox (RMAN + Restic)]() | ora1 |
 | 21 | [IBM DB2 on Docker]() | lx1 |
 | 22 | [Red Hat Tools/Enterprise Installation]() | rhel1 |

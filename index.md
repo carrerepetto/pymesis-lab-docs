@@ -1,11 +1,4 @@
 ---
-title: 00-pymesis-lab-index
-description: index
-published: 1
-date: 2026-08-31T11:17:28.362Z
-tags: 
-editor: markdown
-dateCreated: 2026-08-27T16:50:59.053Z
 ---
 
 # pymesis.lab — Homelab / Mini Datacenter
