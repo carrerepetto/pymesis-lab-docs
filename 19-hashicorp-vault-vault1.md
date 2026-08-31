@@ -2,7 +2,7 @@
 title: 19-hashicorp-vault-vault1
 description: hashicorp-vault
 published: 1
-date: 2026-08-31T11:16:26.789Z
+date: 2026-08-31T11:38:14.321Z
 tags: 
 editor: markdown
 dateCreated: 2026-08-31T11:15:59.641Z
@@ -11,7 +11,7 @@ dateCreated: 2026-08-31T11:15:59.641Z
 # Project 19 — HashiCorp Vault (vault1)
 
 **Previous:** [Project 18 — Ansible Vault Secrets Audit & Migration (lx1, fleet-wide)](18-ansible-vault-secrets-lx1.md)
-**Next:** [Project 20 — Oracle XE Sandbox (ora1)]()
+**Next:** [Project 20 — Oracle XE Sandbox (ora1)](20-oracle-xe-sandbox-ora1.md)
 
 [← Back to Lab Index](00-pymesis-lab-index.md)
 
