@@ -2,13 +2,13 @@
 title: 08-ubuntu-odoo1-db1
 description: ubuntu-24.04
 published: 1
-date: 2026-09-01T17:24:40.280Z
+date: 2026-09-01T19:27:00.972Z
 tags: 
 editor: markdown
 dateCreated: 2026-08-28T10:28:38.865Z
 ---
 
-# Project 8 — Ubuntu 24.04 (odoo1 / db1)
+# Project 8 — Odoo ERP & CRM | odoo1, db1 | VM | ERP Admin, DBA | Ubuntu 24.04, Odoo 19, PostgreSQL 16.14 |
 
 **Previous:** [Project 7 — App Server (app1)](07-windows-server-app1.md)
 **Next:** [Project 9 — Monitoring/SecOps (mon1)](09-rocky-mon01.md)

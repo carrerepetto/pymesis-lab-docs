@@ -2,13 +2,13 @@
 title: 15-k3s-single-node-k3s1
 description: k3s-single-node
 published: 1
-date: 2026-09-01T17:36:48.829Z
+date: 2026-09-01T19:29:45.812Z
 tags: 
 editor: markdown
 dateCreated: 2026-08-30T07:07:05.103Z
 ---
 
-# Project 15 — K3s Single-Node Installation (k3s1)
+# Project 15 — Kubernetes | k3s1 | VM | Platform Admin (K8s) | Ubuntu 24.04, K3s v1.36.2 |
 
 **Previous:** [Project 14 — Private LLM & n8n (llm1,n8n1)](14-private-llm-llm1.md)
 **Next:** [Project 16 — Ansible (lx1)](16-ansible-implementation-lx1.md)

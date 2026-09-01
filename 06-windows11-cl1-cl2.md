@@ -2,13 +2,13 @@
 title: 06-windows11-cl1-cl2
 description: windows11
 published: 1
-date: 2026-09-01T17:21:19.081Z
+date: 2026-09-01T19:26:13.948Z
 tags: 
 editor: markdown
 dateCreated: 2026-08-28T10:24:49.193Z
 ---
 
-# Project 6 — Windows 11 Pro Installation (cl1, cl2)
+# Project 6 — Client Workstations | cl1, cl2 | VM | Domain Clients | Windows 11 Pro |
 
 **Previous:** [Project 5.1 — Restic Backup Policies (bk1)](05-1-restic-backup-policies.md)
 **Next:** [Project 7 — App Server (app1)](07-windows-server-app1.md)

@@ -2,13 +2,13 @@
 title: 16-ansible-implementation-lx1
 description: ansible
 published: 1
-date: 2026-09-01T17:38:30.494Z
+date: 2026-09-01T19:30:05.797Z
 tags: 
 editor: markdown
 dateCreated: 2026-08-30T12:07:15.345Z
 ---
 
-# Project 16 — Ansible Implementation (lx1)
+# Project 16 — Ansible | lx1 | Config | Configuration Management | Ansible |
 
 **Previous:** [Project 15 — Kubernetes (k3s1)](15-k3s-single-node-k3s1.md)
 **Next:** [Project 17 — Terraform/IaC (lx1)](17-terraform-iac-lx1.md)

@@ -2,13 +2,13 @@
 title: 12-odoo-17-18-openupgrade-odoo2
 description: odoo-17-18-openupgrade
 published: 1
-date: 2026-09-01T17:31:23.072Z
+date: 2026-09-01T19:28:39.606Z
 tags: 
 editor: markdown
 dateCreated: 2026-08-29T20:05:35.844Z
 ---
 
-# Project 12 — Odoo 17 → 18 Migration with OpenUpgrade (odoo2)
+# Project 12 — ERP Migration | odoo2 | LXC | ERP Admin | Ubuntu 24.04, Odoo 17→18, OpenUpgrade |
 
 **Previous:** [Project 11 — Registry + CI/CD (hr1)](11-harbor-cicd-hr1.md)
 **Next:** [Project 13 — Medusa eShop (es1)](13-medusa-eshop-es1.md)

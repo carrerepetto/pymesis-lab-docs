@@ -2,13 +2,13 @@
 title: 17-terraform-iac-lx1
 description: terraform-iac
 published: 1
-date: 2026-09-01T17:40:35.651Z
+date: 2026-09-01T19:30:29.319Z
 tags: 
 editor: markdown
 dateCreated: 2026-08-30T19:11:30.705Z
 ---
 
-# Project 17 — Terraform/IaC (lx1)
+# Project 17 — Terraform/IaC | lx1 | Config | Infrastructure as Code | Terraform, bpg/proxmox provider |
 
 **Previous:** [Project 16 — Ansible (lx1)](16-ansible-implementation-lx1.md)
 **Next:** [Project 18 — Ansible Vault (lx1)](18-ansible-vault-secrets-lx1.md)

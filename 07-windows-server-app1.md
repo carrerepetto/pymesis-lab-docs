@@ -2,13 +2,13 @@
 title: 07-windows-server-app1
 description: windows-server
 published: 1
-date: 2026-09-01T17:23:05.434Z
+date: 2026-09-01T19:26:38.525Z
 tags: 
 editor: markdown
 dateCreated: 2026-08-28T10:27:41.754Z
 ---
 
-# Project 7 — Windows Server 2022 (app1)
+# Project 7 — App Server | app1 | VM | App/DB Admin | Windows Server 2022, IIS, SQL Server 2022 Express |
 
 **Previous:** [Project 6 — Client Workstations (cl1, cl2)](06-windows11-cl1-cl2.md)
 **Next:** [Project 8 — Odoo ERP & CRM (odoo1 & db1)](08-ubuntu-odoo1-db1.md)

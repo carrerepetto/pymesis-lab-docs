@@ -2,7 +2,7 @@
 title: 00-pymesis-lab-index
 description: index
 published: 1
-date: 2026-09-01T18:25:22.549Z
+date: 2026-09-01T19:14:19.572Z
 tags: 
 editor: markdown
 dateCreated: 2026-08-27T16:50:59.053Z
@@ -72,10 +72,10 @@ The lab's path follows the actual chronological installation order. Each documen
 
 | Repository | Description | Technology | Host(s) |
 |---|---|---|---|
-| [ansible-pymesis-infra]() | Fleet-wide config management: baseline role + role-specific playbooks | Ansible | lx1 |
-| [terraform-pymesis-infra]() | Production Terraform IaC for VM/LXC provisioning on Proxmox | Terraform, bpg/proxmox | lx1 |
-| [terraform-pymesis-sandbox]() | Sandbox/testing Terraform repo, isolated from production | Terraform, bpg/proxmox | lx1 |
-| [medusa-pymesis-eshop]() | Medusa.js v2 eCommerce application source (Turborepo monorepo) | TypeScript, Node.js, Medusa.js | es1 |
-| [harbor-pymesis-cicd]() | Repo validating the Gitea Actions → Harbor CI/CD pipeline | Gitea Actions, Docker, Harbor | hr1 |
+| [ansible-pymesis-infra](https://github.com/carrerepetto/pymesis-lab-docs/tree/main/ansible-pymesis-infra) | Fleet-wide config management: baseline role + role-specific playbooks | Ansible | lx1 |
+| [terraform-pymesis-infra](https://github.com/carrerepetto/pymesis-lab-docs/tree/main/terraform-pymesis-infra) | Production Terraform IaC for VM/LXC provisioning on Proxmox | Terraform, bpg/proxmox | lx1 |
+| [terraform-pymesis-sandbox](https://github.com/carrerepetto/pymesis-lab-docs/tree/main/terraform-pymesis-sandbox) | Sandbox/testing Terraform repo, isolated from production | Terraform, bpg/proxmox | lx1 |
+| [medusa-pymesis-eshop](https://github.com/carrerepetto/pymesis-lab-docs/tree/main/medusa-pymesis-eshop) | Medusa.js v2 eCommerce application source (Turborepo monorepo) | TypeScript, Node.js, Medusa.js | es1 |
+| [harbor-pymesis-cicd](https://github.com/carrerepetto/pymesis-lab-docs/tree/main/harbor-pymesis-cicd) | Repo validating the Gitea Actions → Harbor CI/CD pipeline | Gitea Actions, Docker, Harbor | hr1 |
 
 *(Links will be completed progressively as each project is documented.)*

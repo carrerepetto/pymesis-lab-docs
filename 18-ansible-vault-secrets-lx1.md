@@ -2,13 +2,13 @@
 title: 18-ansible-vault-secrets-lx1
 description: ansible-vault-secrets
 published: 1
-date: 2026-09-01T17:43:06.274Z
+date: 2026-09-01T19:30:52.694Z
 tags: 
 editor: markdown
 dateCreated: 2026-08-30T19:13:21.297Z
 ---
 
-# Project 18 — Ansible Vault Secrets Audit & Migration (lx1, fleet-wide)
+# Project 18 — Ansible Vault | lx1 | Config | Secrets Management | Ansible Vault |
 
 **Previous:** [Project 17 — Terraform/IaC (lx1)](17-terraform-iac-lx1.md)
 **Next:** [Project 19 — HashiCorp Vault (vault1)](19-hashicorp-vault-vault1.md)

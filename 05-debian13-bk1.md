@@ -2,13 +2,13 @@
 title: 05-debian13-bk1
 description: debian13
 published: 1
-date: 2026-09-01T17:17:36.545Z
+date: 2026-09-01T19:25:17.530Z
 tags: 
 editor: markdown
 dateCreated: 2026-08-27T22:39:12.143Z
 ---
 
-# Project 5 — Debian 13 Installation (bk1)
+# Project 5 — Backup Server | bk1 | VM | Backup & Storage | Debian 13, Restic 0.17.3 |
 
 **Previous:** [Project 4 — Docker Host (lx1)](04-ubuntu-2204-lx1.md)
 **Next:** [Project 5.1 — Restic Backup Policies (bk1)](05-1-restic-backup-policies.md)

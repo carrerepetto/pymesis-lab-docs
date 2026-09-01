@@ -2,13 +2,13 @@
 title: 14-private-llm-llm1
 description: private-llm
 published: 1
-date: 2026-09-01T17:35:00.922Z
+date: 2026-09-01T19:29:23.576Z
 tags: 
 editor: markdown
 dateCreated: 2026-08-30T07:05:24.984Z
 ---
 
-# Project 14 — Private LLM & N8N Installation (llm1, n8n1)
+# Project 14 — Private LLM & n8n | llm1, n8n1 | LXC | LLM/Automation | Ollama, Open WebUI, n8n |
 
 **Previous:** [Project 13 — Medusa eShop (es1)](13-medusa-eshop-es1.md)
 **Next:** [Project 15 — Kubernetes (k3s1)](15-k3s-single-node-k3s1.md)

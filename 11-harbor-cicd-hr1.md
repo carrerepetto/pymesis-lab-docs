@@ -2,13 +2,13 @@
 title: 11-harbor-cicd-hr1
 description: harbor
 published: 1
-date: 2026-09-01T17:29:50.150Z
+date: 2026-09-01T19:28:16.821Z
 tags: 
 editor: markdown
 dateCreated: 2026-08-29T20:03:53.115Z
 ---
 
-# Project 11 — Harbor + CI/CD Installation (hr1)
+# Project 11 — Registry + CI/CD | hr1 | VM | Registry/CI-CD | Ubuntu 24.04, Harbor 2.15.1, Trivy, Gitea Actions runner |
 
 **Previous:** [Project 10 — ITSM (glpi1)](10-glpi-glpi1.md)
 **Next:** [Project 12 — ERP Migration (odoo2)](12-odoo-17-18-openupgrade-odoo2.md)

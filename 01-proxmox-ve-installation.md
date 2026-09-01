@@ -2,13 +2,13 @@
 title: 01-proxmox-ve-installation
 description: proxmox-ve
 published: 1
-date: 2026-09-01T17:18:35.082Z
+date: 2026-09-01T19:23:03.096Z
 tags: 
 editor: markdown
 dateCreated: 2026-08-27T16:52:28.360Z
 ---
 
-# Project 1 — Proxmox VE 8.4.1 Installation (node1)
+# Project 1 — Proxmox VE 8.4.1) | pve1 | Bare Metal | Hypervisor | Proxmox VE 8.4.1 |
 
 **Previous:** — (first project in the lab)
 **Next:** [Project 1.1 — Ordered Shutdown Script (pve1)](01-1-ordered-shutdown-script.md)

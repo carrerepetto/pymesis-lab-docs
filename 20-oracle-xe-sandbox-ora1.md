@@ -2,13 +2,13 @@
 title: 20-oracle-xe-sandbox-ora1
 description: oracle-xe-sandbox
 published: 1
-date: 2026-09-01T17:46:41.987Z
+date: 2026-09-01T19:31:33.397Z
 tags: 
 editor: markdown
 dateCreated: 2026-08-31T11:37:38.616Z
 ---
 
-# Project 20 — Oracle XE Sandbox (ora1)
+# Project 20 — Oracle XE Sandbox | ora1 | VM | DBA | Rocky Linux 9.7, Oracle XE 21c |
 
 **Previous:** [Project 19 — HashiCorp Vault (vault1)](19-hashicorp-vault-vault1.md)
 **Next:** [Project 21 — IBM Db2 (lx1)](21-ibm-db2-lx1.md)

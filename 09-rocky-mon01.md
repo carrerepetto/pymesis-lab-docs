@@ -2,13 +2,13 @@
 title: 09-rocky-mon01
 description: rocky
 published: 1
-date: 2026-09-01T17:26:06.216Z
+date: 2026-09-01T19:27:26.620Z
 tags: 
 editor: markdown
 dateCreated: 2026-08-28T10:29:30.130Z
 ---
 
-# Project 9 — Rocky Linux 9.4 Installation (mon1)
+# Project 9 — Monitoring/SecOps | mon1 | VM | Monitoring & SecOps | Rocky Linux 9.4, Zabbix 7.0, Grafana, Wazuh 4.11.2 |
 
 **Previous:** [Project 8 — Odoo ERP & CRM (odoo1 & db1)](08-ubuntu-odoo1-db1.md)
 **Next:** [Project 10 — ITSM (glpi1)](10-glpi-glpi1.md)

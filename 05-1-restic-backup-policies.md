@@ -2,13 +2,13 @@
 title: 05-1-restic-backup-policies
 description: restic-backup
 published: 1
-date: 2026-09-01T17:17:22.550Z
+date: 2026-09-01T19:25:49.185Z
 tags: 
 editor: markdown
 dateCreated: 2026-08-27T22:40:07.657Z
 ---
 
-# Project 5.1 — Restic Backup Architecture (Fleet-Wide)
+# Project 5.1 — Restic Backup Policies | bk1 | Config | Backup Configuration | Restic |
 
 **Previous:** [Project 5 — Backup Server (bk1)](05-debian13-bk1.md)
 **Next:** [Project 6 — Client Workstations (cl1, cl2)](06-windows11-cl1-cl2.md)

@@ -2,13 +2,13 @@
 title: 22-redhat-idm-trust-rhel1
 description: redhat-idm-trust
 published: 1
-date: 2026-09-01T17:49:27.261Z
+date: 2026-09-01T19:32:15.925Z
 tags: 
 editor: markdown
 dateCreated: 2026-09-01T10:30:47.376Z
 ---
 
-# Project 22 — Red Hat / RHEL + IdM-AD Trust (rhel1)
+# Project 22 — Red Hat Tools/Enterprise | rhel1 | VM | Identity (IdM/AD Trust) | RHEL, IdM |
 
 **Previous:** [Project 21 — IBM Db2 (lx1)](21-ibm-db2-lx1.md)
 **Next:** Not yet defined

@@ -2,13 +2,13 @@
 title: 01-1-ordered-shutdown-script
 description: shutdown
 published: 1
-date: 2026-09-01T17:18:24.138Z
+date: 2026-09-01T19:22:26.735Z
 tags: 
 editor: markdown
 dateCreated: 2026-08-27T16:53:35.022Z
 ---
 
-# Project 1.1 — Ordered Shutdown Script on Proxmox (pve1)
+# Project 1.1 - Ordered Shutdown Script | pve1 | Config | Automation Script | Bash |
 
 **Previous:** [Project 1 — Proxmox VE 8.4.1 (pve1)](01-proxmox-ve-installation.md)
 **Next:** [Project 2 — OPNsense (fw1)](02-opnsense-installation.md)

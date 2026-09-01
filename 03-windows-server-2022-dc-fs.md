@@ -2,13 +2,13 @@
 title: 03-windows-server-2022-dc-fs
 description: windows-server
 published: 1
-date: 2026-09-01T17:17:55.774Z
+date: 2026-09-01T19:23:58.668Z
 tags: 
 editor: markdown
 dateCreated: 2026-08-27T16:55:32.797Z
 ---
 
-# Project 3 — Windows Server 2022 Installation (dc1, dc2, fs1)
+# Project 3 — Windows Server | dc1, dc2, fs1 | VM | AD DS/DNS/DHCP/GPO/ADCS (dc1/dc2), File Server (fs1) | Windows Server 2022 |
 
 **Previous:** [Project 2 — OPNsense (fw1)](02-opnsense-installation.md)
 **Next:** [Project 4 — Docker Host (lx1)](04-ubuntu-2204-lx1.md)

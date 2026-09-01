@@ -2,13 +2,13 @@
 title: 04-ubuntu-2204-lx1
 description: ubuntu-2204
 published: 1
-date: 2026-09-01T17:11:17.545Z
+date: 2026-09-01T19:24:38.045Z
 tags: 
 editor: markdown
 dateCreated: 2026-08-27T22:38:04.620Z
 ---
 
-# Project 4 — Ubuntu 22.04 Installation (lx1)
+# Project 4 — Docker Host | lx1 | VM | Platform Admin | Ubuntu 22.04, Docker CE, Portainer, WikiJS, Gitea, Uptime Kuma, Nginx |
 
 **Previous:** [Project 3 — Windows Server (dc1, dc2, fs1)](03-windows-server-2022-dc-fs.md)
 **Next:** [Project 5 — Backup Server (bk1)](05-debian13-bk1.md)

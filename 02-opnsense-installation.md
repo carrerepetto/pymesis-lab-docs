@@ -2,13 +2,13 @@
 title: 02-opnsense-installation
 description: opnsense
 published: 1
-date: 2026-09-01T17:18:05.592Z
+date: 2026-09-01T19:22:09.377Z
 tags: 
 editor: markdown
 dateCreated: 2026-08-27T16:54:33.588Z
 ---
 
-# Project 2 — OPNsense 26.1.6 Installation (fw1)
+# Project 2 - OPNsense | fw1 | VM | Firewall/Network | OPNsense 26.1.6 |
 
 **Previous:** [Project 1.1 — Ordered Shutdown Script (pve1)](01-1-ordered-shutdown-script.md)
 **Next:** [Project 3 — Windows Server (dc1, dc2, fs1)](03-windows-server-2022-dc-fs.md)

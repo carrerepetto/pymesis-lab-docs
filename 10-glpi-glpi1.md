@@ -2,13 +2,13 @@
 title: 10-glpi-glpi1
 description: glpi
 published: 1
-date: 2026-09-01T17:28:00.870Z
+date: 2026-09-01T19:27:51.415Z
 tags: 
 editor: markdown
 dateCreated: 2026-08-28T21:02:03.427Z
 ---
 
-# Project 10 — GLPI Installation (glpi1)
+# Project 10 — ITSM | glpi1 | LXC | ITSM Admin | Debian 12, GLPI 11.0.8, MariaDB |
 
 **Previous:** [Project 9 — Monitoring/SecOps (mon1)](09-rocky-mon01.md)
 **Next:** [Project 11 — Registry + CI/CD (hr1)](11-harbor-cicd-hr1.md)

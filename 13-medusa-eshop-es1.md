@@ -2,13 +2,13 @@
 title: 13-medusa-eshop-es2
 description: medusa-eshop
 published: 1
-date: 2026-09-01T17:33:11.970Z
+date: 2026-09-01T19:29:00.772Z
 tags: 
 editor: markdown
 dateCreated: 2026-08-29T20:07:19.406Z
 ---
 
-# Project 13 — Medusa eShop Installation (es1)
+# Project 13 — Medusa eShop | es1 | LXC | eCommerce | Ubuntu 24.04, Medusa.js v2, Node.js, PostgreSQL, Redis |
 
 **Previous:** [Project 12 — ERP Migration (odoo2)](12-odoo-17-18-openupgrade-odoo2.md)
 **Next:** [Project 14 — Private LLM & n8n (llm1, n8n1)](14-private-llm-llm1.md)

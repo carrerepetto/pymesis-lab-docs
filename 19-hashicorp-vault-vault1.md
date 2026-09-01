@@ -2,13 +2,13 @@
 title: 19-hashicorp-vault-vault1
 description: hashicorp-vault
 published: 1
-date: 2026-09-01T17:45:11.020Z
+date: 2026-09-01T19:31:12.648Z
 tags: 
 editor: markdown
 dateCreated: 2026-08-31T11:15:59.641Z
 ---
 
-# Project 19 — HashiCorp Vault (vault1)
+# Project 19 — HashiCorp Vault | vault1 | LXC | Secrets Management | Vault (KV v2, PKI Intermediate CA, AppRole, Raft) |
 
 **Previous:** [Project 18 — Ansible Vault (lx1)](18-ansible-vault-secrets-lx1.md)
 **Next:** [Project 20 — Oracle XE Sandbox (ora1)](20-oracle-xe-sandbox-ora1.md)

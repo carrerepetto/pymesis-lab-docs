@@ -2,13 +2,13 @@
 title: 21-ibm-db2-lx1
 description: ibm-db2
 published: 1
-date: 2026-09-01T17:48:12.369Z
+date: 2026-09-01T19:31:54.597Z
 tags: 
 editor: markdown
 dateCreated: 2026-08-31T11:39:52.494Z
 ---
 
-# Project 21 — IBM Db2 (lx1)
+# Project 21 — IBM Db2 | lx1 | Container | DBA | IBM Db2 Community Edition |
 
 **Previous:** [Project 20 — Oracle XE Sandbox (ora1)](20-oracle-xe-sandbox-ora1.md)
 **Next:** [Project 22 — Red Hat Tools/Enterprise (rhel1)](22-redhat-idm-trust-rhel1.md)
