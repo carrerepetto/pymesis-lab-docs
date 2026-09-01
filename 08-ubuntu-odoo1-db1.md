@@ -2,7 +2,7 @@
 title: 08-ubuntu-odoo1-db1
 description: ubuntu-24.04
 published: 1
-date: 2026-08-30T07:31:32.382Z
+date: 2026-09-01T17:24:40.280Z
 tags: 
 editor: markdown
 dateCreated: 2026-08-28T10:28:38.865Z
@@ -10,8 +10,8 @@ dateCreated: 2026-08-28T10:28:38.865Z
 
 # Project 8 — Ubuntu 24.04 (odoo1 / db1)
 
-**Previous:** [Project 7 — Windows Server 2022 Installation (app1)](07-windows-server-app1.md)
-**Next:** [Project 9 — Rocky Linux 9.4 Installation (mon1)](09-rocky-mon01.md)
+**Previous:** [Project 7 — App Server (app1)](07-windows-server-app1.md)
+**Next:** [Project 9 — Monitoring/SecOps (mon1)](09-rocky-mon01.md)
 
 [← Back to Lab Index](00-pymesis-lab-index.md)
 
@@ -148,4 +148,4 @@ The only remaining pending item — not urgent — is installing the lab's CA ro
 
 ---
 
-**Previous:** Project 7 — Windows Server 2022 (APP01) | **Next:** Project 9 — Rocky Linux 9 (MON01)
+[← **Previous:** Project 7 — App Server (app1)](07-windows-server-app1.md) | [**Next:** Project 9 — Monitoring/SecOps (mon1) →](09-rocky-mon01.md)

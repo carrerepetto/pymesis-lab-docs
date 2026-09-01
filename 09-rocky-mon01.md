@@ -2,7 +2,7 @@
 title: 09-rocky-mon01
 description: rocky
 published: 1
-date: 2026-08-30T07:31:40.581Z
+date: 2026-09-01T17:26:06.216Z
 tags: 
 editor: markdown
 dateCreated: 2026-08-28T10:29:30.130Z
@@ -10,8 +10,8 @@ dateCreated: 2026-08-28T10:29:30.130Z
 
 # Project 9 — Rocky Linux 9.4 Installation (mon1)
 
-**Previous:** [Project 8 — Ubuntu 24.04 Installation (odoo1 & db1)](08-ubuntu-odoo1-db1.md)
-**Next:** [Project 10 — GLPI Installation (glpi1)](10-glpi-glpi1.md)
+**Previous:** [Project 8 — Odoo ERP & CRM (odoo1 & db1)](08-ubuntu-odoo1-db1.md)
+**Next:** [Project 10 — ITSM (glpi1)](10-glpi-glpi1.md)
 
 [← Back to Lab Index](00-pymesis-lab-index.md)
 
@@ -201,4 +201,4 @@ Wazuh dashboard access on MON01 was restored with a freshly regenerated, verifie
 
 ---
 
-**Previous:** Project 8 — Ubuntu 24.04 (ODOO01/DB01) | **Next:** Project 10 — GLPI (GLPI1)
+[← **Previous:** Project 8 — Odoo ERP & CRM (odoo1 & db1)](08-ubuntu-odoo1-db1.md) | [**Next:** Project 10 — ITSM (glpi1) →](10-glpi-glpi1.md)

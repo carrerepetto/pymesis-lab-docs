@@ -2,7 +2,7 @@
 title: 14-private-llm-llm1
 description: private-llm
 published: 1
-date: 2026-08-30T07:41:21.969Z
+date: 2026-09-01T17:35:00.922Z
 tags: 
 editor: markdown
 dateCreated: 2026-08-30T07:05:24.984Z
@@ -10,8 +10,8 @@ dateCreated: 2026-08-30T07:05:24.984Z
 
 # Project 14 — Private LLM & N8N Installation (llm1, n8n1)
 
-**Previous:** [Project 13 — Medusa eShop Installation (es1)](13-medusa-eshop-es1.md)
-**Next:** [Project 15 — K3s Single-Node Installation (k3s1)](15-k3s-single-node-k3s1.md)
+**Previous:** [Project 13 — Medusa eShop (es1)](13-medusa-eshop-es1.md)
+**Next:** [Project 15 — Kubernetes (k3s1)](15-k3s-single-node-k3s1.md)
 
 [← Back to Lab Index](00-pymesis-lab-index.md)
 
@@ -149,3 +149,7 @@ A first attempt to give WikiJS its own webhook-driven workflow (`wikijs-sync-rag
 - Backup path convention (`/mnt/backups/repos/<hostname>`, `RESTIC_PASSWORD_FILE`-based cron) is the same lab-wide standard referenced in Project 13.
 - The Gitea Actions CI/CD runner used for Harbor (Project 11) is a separate mechanism from n8n's Gitea System Webhook — both listen to Gitea events, but for different purposes (image builds vs. RAG sync).
 - The WikiJS data-loss incident is directly relevant to any future work involving `--force-recreate` on long-running containers that predate documented backup coverage — worth a deliberate audit pass across the rest of lx1's older services (Gitea, Portainer, Uptime Kuma) to confirm none share the same gap.
+
+---
+
+[← **Previous:** Project 13 — Medusa eShop (es1)](13-medusa-eshop-es1.md) | [**Next:** Project 15 — Kubernetes (k3s1) →](15-k3s-single-node-k3s1.md)

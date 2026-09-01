@@ -2,7 +2,7 @@
 title: 03-windows-server-2022-dc-fs
 description: windows-server
 published: 1
-date: 2026-08-28T21:47:04.016Z
+date: 2026-09-01T17:17:55.774Z
 tags: 
 editor: markdown
 dateCreated: 2026-08-27T16:55:32.797Z
@@ -10,8 +10,8 @@ dateCreated: 2026-08-27T16:55:32.797Z
 
 # Project 3 — Windows Server 2022 Installation (dc1, dc2, fs1)
 
-**Previous:** [Project 2 — OPNsense 26.1.6 Installation (fw1)](02-opnsense-installation.md)
-**Next:** [Project 4 — Ubuntu 22.04 Installation (lx1)](04-ubuntu-2204-lx1.md)
+**Previous:** [Project 2 — OPNsense (fw1)](02-opnsense-installation.md)
+**Next:** [Project 4 — Docker Host (lx1)](04-ubuntu-2204-lx1.md)
 
 [← Back to Lab Index](00-pymesis-lab-index.md)
 
@@ -154,3 +154,7 @@ Replication verified with `repadmin /replsummary` (target: `0 fails`).
 
 - The temporary flat-bridge approach here mirrors the same reasoning used for [Project 2](02-opnsense-installation.md)'s remote-access NAT workaround: both are pragmatic stand-ins for the MikroTik CRS310-based VLAN design, explicitly documented as temporary.
 - Fleet-wide conventions referenced here (Restic backups to `bk1`, Zabbix/Wazuh agents) are defined in the [Lab Index](00-pymesis-lab-index.md).
+
+---
+
+[← **Previous:** Project 2 — OPNsense (fw1)](02-opnsense-installation.md) | [**Next:** Project 4 — Docker Host (lx1) →](04-ubuntu-2204-lx1.md)

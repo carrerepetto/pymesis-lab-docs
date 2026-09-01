@@ -2,7 +2,7 @@
 title: 05-debian13-bk1
 description: debian13
 published: 1
-date: 2026-08-28T21:46:22.968Z
+date: 2026-09-01T17:17:36.545Z
 tags: 
 editor: markdown
 dateCreated: 2026-08-27T22:39:12.143Z
@@ -10,8 +10,8 @@ dateCreated: 2026-08-27T22:39:12.143Z
 
 # Project 5 — Debian 13 Installation (bk1)
 
-**Previous:** [Project 4 — Ubuntu 22.04 Installation (lx1)](04-ubuntu-2204-lx1.md)
-**Next:** [Project 5.1 — Restic Backup Architecture (bk1)](05-1-restic-backup-policies.md)
+**Previous:** [Project 4 — Docker Host (lx1)](04-ubuntu-2204-lx1.md)
+**Next:** [Project 5.1 — Restic Backup Policies (bk1)](05-1-restic-backup-policies.md)
 
 [← Back to Lab Index](00-pymesis-lab-index.md)
 
@@ -168,3 +168,7 @@ With the base OS and backup disk ready, the actual backup architecture (reposito
 
 - DNS resolution for `bk1` uses `dc1`/`dc2` as configured in [Project 3](03-windows-server-2022-dc-fs.md).
 - `bk1` is the backup destination referenced throughout every other project's "Final Result" and "Backups" sections (e.g. [Project 4](04-ubuntu-2204-lx1.md)).
+
+---
+
+[← **Previous:** Project 4 — Docker Host (lx1)](04-ubuntu-2204-lx1.md) | [**Next:** Project 5.1 — Restic Backup Policies (bk1) →](05-1-restic-backup-policies.md)

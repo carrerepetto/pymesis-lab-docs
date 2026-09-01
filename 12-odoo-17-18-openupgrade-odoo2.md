@@ -2,7 +2,7 @@
 title: 12-odoo-17-18-openupgrade-odoo2
 description: odoo-17-18-openupgrade
 published: 1
-date: 2026-08-30T07:28:25.549Z
+date: 2026-09-01T17:31:23.072Z
 tags: 
 editor: markdown
 dateCreated: 2026-08-29T20:05:35.844Z
@@ -10,8 +10,8 @@ dateCreated: 2026-08-29T20:05:35.844Z
 
 # Project 12 — Odoo 17 → 18 Migration with OpenUpgrade (odoo2)
 
-**Previous:** [Project 11 — Harbor and CI/CD Installation (hr1)](11-harbor-cicd-hr1.md)
-**Next:** [Project 13 — Medusa eShop Installation (es1)](13-medusa-eshop-es1.md)
+**Previous:** [Project 11 — Registry + CI/CD (hr1)](11-harbor-cicd-hr1.md)
+**Next:** [Project 13 — Medusa eShop (es1)](13-medusa-eshop-es1.md)
 
 [← Back to Lab Index](00-pymesis-lab-index.md)
 
@@ -131,4 +131,4 @@ Odoo 17 → 18 migration completed and validated end-to-end on isolated staging 
 
 ---
 
-[← Previous: Project 11 — Harbor and CI/CD Installation](11-harbor-cicd-installation.md) | [Next: Project 13 — Medusa eShop Installation →](13-medusa-eshop-installation.md)
+[← **Previous:** Project 11 — Registry + CI/CD (hr1)](11-harbor-cicd-hr1.md) | [**Next:** Project 13 — Medusa eShop (es1) →](13-medusa-eshop-es1.md)

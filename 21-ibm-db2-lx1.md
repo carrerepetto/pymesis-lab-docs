@@ -2,7 +2,7 @@
 title: 21-ibm-db2-lx1
 description: ibm-db2
 published: 1
-date: 2026-08-31T11:39:52.494Z
+date: 2026-09-01T17:48:12.369Z
 tags: 
 editor: markdown
 dateCreated: 2026-08-31T11:39:52.494Z
@@ -11,7 +11,7 @@ dateCreated: 2026-08-31T11:39:52.494Z
 # Project 21 — IBM Db2 (lx1)
 
 **Previous:** [Project 20 — Oracle XE Sandbox (ora1)](20-oracle-xe-sandbox-ora1.md)
-**Next:** [Project 22 — Red Hat tools (rhel1)]()
+**Next:** [Project 22 — Red Hat Tools/Enterprise (rhel1)](22-redhat-idm-trust-rhel1.md)
 
 [← Back to Lab Index](00-pymesis-lab-index.md)
 
@@ -109,3 +109,7 @@ This project follows the same "sandbox, no dedicated infrastructure" pattern est
 - Project 4 — Ubuntu 22.04 + Docker + Nginx (lx1), the host and Docker Compose environment this project's container runs on, alongside Portainer, WikiJS, Gitea, and Uptime Kuma.
 - Project 5 / 5.1 — Backups, Restic (bk1), the shared repository this project's backup was folded into rather than kept separate.
 - Project 22 — Red Hat tools (rhel1), the next project in the series.
+
+---
+
+[← **Previous:** Project 20 — Oracle XE Sandbox (ora1)](20-oracle-xe-sandbox-ora1.md)) | [**Next:** Project 22 — Red Hat Tools/Enterprise (rhel1) →](22-redhat-idm-trust-rhel1.md)

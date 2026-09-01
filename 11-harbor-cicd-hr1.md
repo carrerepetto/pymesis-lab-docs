@@ -2,7 +2,7 @@
 title: 11-harbor-cicd-hr1
 description: harbor
 published: 1
-date: 2026-08-30T07:24:46.364Z
+date: 2026-09-01T17:29:50.150Z
 tags: 
 editor: markdown
 dateCreated: 2026-08-29T20:03:53.115Z
@@ -10,8 +10,8 @@ dateCreated: 2026-08-29T20:03:53.115Z
 
 # Project 11 — Harbor + CI/CD Installation (hr1)
 
-**Previous:** [Project 10 — GLPI Installation (glpi1)](10-glpi-glpi1.md)
-**Next:** [Project 12 — Odoo 17→18 OpenUpgrade (odoo2)](12-odoo-17-18-openupgrade-odoo2.md)
+**Previous:** [Project 10 — ITSM (glpi1)](10-glpi-glpi1.md)
+**Next:** [Project 12 — ERP Migration (odoo2)](12-odoo-17-18-openupgrade-odoo2.md)
 
 [← Back to Lab Index](00-pymesis-lab-index.md)
 
@@ -518,3 +518,7 @@ This closes the Harbor + CI/CD project scope. It stands as one of the more troub
 - [Project 10 — GLPI (ITSM)](./10-glpi.md): source of the certificate-issuance and agent-installation patterns reused here.
 - [Project 13 — eShop (Medusa, `es1`)](./13-eshop-medusa.md) and [Project 15 — K3s (`k3s1`)](./15-k3s.md): later projects that can push/pull images through this registry.
 - [Project 17 — Terraform/IaC](./17-terraform.md): automates the same cloud-image + cloud-init VM provisioning pattern used manually here.
+
+---
+
+[← **Previous:** Project 10 — ITSM (glpi1)](10-glpi-glpi1.md) | [**Next:** Project 12 — ERP Migration (odoo2) →](12-odoo-17-18-openupgrade-odoo2.md)

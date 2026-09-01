@@ -2,7 +2,7 @@
 title: 06-windows11-cl1-cl2
 description: windows11
 published: 1
-date: 2026-08-28T21:45:44.026Z
+date: 2026-09-01T17:21:19.081Z
 tags: 
 editor: markdown
 dateCreated: 2026-08-28T10:24:49.193Z
@@ -10,8 +10,8 @@ dateCreated: 2026-08-28T10:24:49.193Z
 
 # Project 6 — Windows 11 Pro Installation (cl1, cl2)
 
-**Previous:** [Project 5.1 — Restic Backup Architecture (bk1)](05-1-restic-backup-policies.md)
-**Next:** [Project 7 — Windows Server 2022 Installation (app1)](07-windows-server-app1.md)
+**Previous:** [Project 5.1 — Restic Backup Policies (bk1)](05-1-restic-backup-policies.md)
+**Next:** [Project 7 — App Server (app1)](07-windows-server-app1.md)
 
 [← Back to Lab Index](00-pymesis-lab-index.md)
 
@@ -131,3 +131,7 @@ Phases 1–9 were repeated identically for `cl2`, changing only the VM ID, name,
 
 - Domain join relies on `dc1`/`dc2` from [Project 3](03-windows-server-2022-dc-fs.md); drive mappings point to shares on `fs1`, also from Project 3.
 - VLAN10's actual addressing (`10.0.10.0/24`, DHCP scope on `dc1`, OPNsense relay) and the decision to exclude `cl1`/`cl2` from backup and monitoring were clarified in a later fleet-wide alignment pass, alongside similar conventions documented in [Project 5.1](05-1-restic-backup-policies.md).
+
+---
+
+[← **Previous:** Project 5.1 — Restic Backup Policies (bk1)](05-1-restic-backup-policies.md) | [**Next:** Project 7 — App Server (app1) →](07-windows-server-app1.md)

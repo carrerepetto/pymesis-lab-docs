@@ -2,7 +2,7 @@
 title: 13-medusa-eshop-es2
 description: medusa-eshop
 published: 1
-date: 2026-08-30T07:29:30.585Z
+date: 2026-09-01T17:33:11.970Z
 tags: 
 editor: markdown
 dateCreated: 2026-08-29T20:07:19.406Z
@@ -10,8 +10,8 @@ dateCreated: 2026-08-29T20:07:19.406Z
 
 # Project 13 — Medusa eShop Installation (es1)
 
-**Previous:** [Project 12 — Odoo 17→18 Migration with OpenUpgrade (odoo2)](12-odoo-17-18-openupgrade-odoo2.md)
-**Next:** [Project 14 — Private LLM Installation (llm1)](14-private-llm-llm1.md)
+**Previous:** [Project 12 — ERP Migration (odoo2)](12-odoo-17-18-openupgrade-odoo2.md)
+**Next:** [Project 14 — Private LLM & n8n (llm1, n8n1)](14-private-llm-llm1.md)
 
 [← Back to Lab Index](00-pymesis-lab-index.md)
 
@@ -123,3 +123,7 @@ Zabbix, Wazuh, and GLPI agents were installed on es1, matching the fleet-wide pa
 - CI/CD pipeline built in [Project 11 — Harbor and CI/CD Installation](11-harbor-cicd-installation.md): es1 reused the existing `pymesis` Harbor project and `robot$gitea-ci` account, and this project's troubleshooting incidentally fixed a `/tmp`-installation outage in that same host.
 - Backup pattern consistent with [Project 5.1 — Restic Configuration](05-1-restic-configuration.md), using the lab-wide standardized path `/mnt/backups/repos/<vm>`.
 - Positions es1 as the first realistic migration candidate for Project 15 — K3s Single-Node Installation, given its clean separation between backend and frontend services.
+
+---
+
+[← **Previous:** Project 12 — ERP Migration (odoo2)](12-odoo-17-18-openupgrade-odoo2.md) | [**Next:** Project 14 — Private LLM & n8n (llm1, n8n1) →](14-private-llm-llm1.md)

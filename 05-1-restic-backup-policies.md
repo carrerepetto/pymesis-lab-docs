@@ -2,7 +2,7 @@
 title: 05-1-restic-backup-policies
 description: restic-backup
 published: 1
-date: 2026-08-28T21:07:09.619Z
+date: 2026-09-01T17:17:22.550Z
 tags: 
 editor: markdown
 dateCreated: 2026-08-27T22:40:07.657Z
@@ -10,8 +10,8 @@ dateCreated: 2026-08-27T22:40:07.657Z
 
 # Project 5.1 — Restic Backup Architecture (Fleet-Wide)
 
-**Previous:** [Project 5 — Debian 13 Installation (bk1)](05-debian13-bk1.md)
-**Next:** [Project 6 — Windows 11 Pro Installation (cl1, cl2)](06-windows11-cl1-cl2.md)
+**Previous:** [Project 5 — Backup Server (bk1)](05-debian13-bk1.md)
+**Next:** [Project 6 — Client Workstations (cl1, cl2)](06-windows11-cl1-cl2.md)
 
 [← Back to Lab Index](00-pymesis-lab-index.md)
 
@@ -209,3 +209,7 @@ Retention (Restic): `--keep-weekly 4 --keep-monthly 6`, no daily tier. Restic en
 - Built directly on the disk and OS setup from [Project 5](05-debian13-bk1.md).
 - Backup destinations and schedules referenced here are cited in each individual server's own project doc (e.g. [Project 3](03-windows-server-2022-dc-fs.md) for `dc1`/`dc2`/`fs1`, [Project 4](04-ubuntu-2204-lx1.md) for `lx1`).
 - The short-hostname convention this project standardized on (`lx1`, `bk1`, `app1`, etc.) originates from the rename documented in [Project 4](04-ubuntu-2204-lx1.md).
+
+---
+
+[← **Previous:** Project 5 — Backup Server (bk1)](05-debian13-bk1.md) | [**Next:** Project 6 — Client Workstations (cl1, cl2) →](06-windows11-cl1-cl2.md)

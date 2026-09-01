@@ -2,7 +2,7 @@
 title: 18-ansible-vault-secrets-lx1
 description: ansible-vault-secrets
 published: 1
-date: 2026-08-31T11:16:59.953Z
+date: 2026-09-01T17:43:06.274Z
 tags: 
 editor: markdown
 dateCreated: 2026-08-30T19:13:21.297Z
@@ -130,3 +130,7 @@ Since the Filebeat and OpenSearch keystores are write-only, recovery wasn't an o
 - Project 2 — OPNsense
 - Project 5 / 5.1 — Backups, Restic (bk1)
 - Project 19 — HashiCorp Vault (vault1), the planned continuation
+
+---
+
+[← **Previous:** Project 17 — Terraform/IaC (lx1)](17-terraform-iac-lx1.md) | [**Next:** Project 19 — HashiCorp Vault (vault1) →](19-hashicorp-vault-vault1.md)

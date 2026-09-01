@@ -2,7 +2,7 @@
 title: 16-ansible-implementation-lx1
 description: ansible
 published: 1
-date: 2026-08-30T19:15:33.827Z
+date: 2026-09-01T17:38:30.494Z
 tags: 
 editor: markdown
 dateCreated: 2026-08-30T12:07:15.345Z
@@ -10,8 +10,8 @@ dateCreated: 2026-08-30T12:07:15.345Z
 
 # Project 16 — Ansible Implementation (lx1)
 
-**Previous:** [Project 15 — K3s Single-Node Installation (k3s1)](15-k3s-single-node-k3s1.md)
-**Next:** [Project 17 — Terraform/IaC Implementation (lx1)](17-terraform-iac-lx1.md)
+**Previous:** [Project 15 — Kubernetes (k3s1)](15-k3s-single-node-k3s1.md)
+**Next:** [Project 17 — Terraform/IaC (lx1)](17-terraform-iac-lx1.md)
 
 [← Back to Lab Index](00-pymesis-lab-index.md)
 
@@ -126,3 +126,7 @@ The final blocker to a full 16/16 close-out was `app1`'s scheduled backup task a
 - The `bk1` backup-destination and `RESTIC_PASSWORD_FILE`/repository-path conventions referenced throughout this project are the same lab-wide standard used in Projects 10–15.
 - `vault1`'s onboarding here is a late cross-link to the separate HashiCorp Vault project (indexed later in the lab as its own item) — the two projects' documentation should be read together for the full picture of the lab's secrets-management story.
 - The lab index lists Ansible Vault Implementation as a separate, later project — in practice, Ansible Vault was integrated from this project's first commit and its secrets-migration work (the bulk of this document's Phases 5 and 9) was carried out entirely within this same session; any distinct Ansible Vault project documentation should be treated as a continuation or refinement of what's already covered here, not a separate starting point.
+
+---
+
+[← **Previous:** Project 15 — Kubernetes (k3s1)](15-k3s-single-node-k3s1.md) | [**Next:** Project 17 — Terraform/IaC (lx1) →](17-terraform-iac-lx1.md)

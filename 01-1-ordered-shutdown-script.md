@@ -2,7 +2,7 @@
 title: 01-1-ordered-shutdown-script
 description: shutdown
 published: 1
-date: 2026-08-28T21:18:34.349Z
+date: 2026-09-01T17:18:24.138Z
 tags: 
 editor: markdown
 dateCreated: 2026-08-27T16:53:35.022Z
@@ -10,8 +10,8 @@ dateCreated: 2026-08-27T16:53:35.022Z
 
 # Project 1.1 — Ordered Shutdown Script on Proxmox (pve1)
 
-**Previous:** [Project 1 — Proxmox VE 8.4.1 Installation (node1)](01-proxmox-ve-installation.md)
-**Next:** [Project 2 — OPNsense 26.1.6 Installation (fw1)](02-opnsense-installation.md)
+**Previous:** [Project 1 — Proxmox VE 8.4.1 (pve1)](01-proxmox-ve-installation.md)
+**Next:** [Project 2 — OPNsense (fw1)](02-opnsense-installation.md)
 
 [← Back to Lab Index](00-pymesis-lab-index.md)
 
@@ -124,3 +124,7 @@ After confirming the shutdown worked, the `onboot` flag on each VM/LXC was audit
 
 - This project depends directly on [Project 1 — Proxmox VE Installation](01-proxmox-ve-installation.md), which it builds on.
 - The `sadmin` + restricted-SSH-key access convention used here is the same one later generalized as the lab's standard (see conventions in the [lab index](00-pymesis-lab-index.md)).
+
+---
+
+[← **Previous:** Project 1 — Proxmox VE 8.4.1 (pve1)](01-proxmox-ve-installation.md) | [**Next:** Project 2 — OPNsense (fw1) →](02-opnsense-installation.md)

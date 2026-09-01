@@ -2,7 +2,7 @@
 title: 19-hashicorp-vault-vault1
 description: hashicorp-vault
 published: 1
-date: 2026-08-31T11:38:14.321Z
+date: 2026-09-01T17:45:11.020Z
 tags: 
 editor: markdown
 dateCreated: 2026-08-31T11:15:59.641Z
@@ -10,7 +10,7 @@ dateCreated: 2026-08-31T11:15:59.641Z
 
 # Project 19 — HashiCorp Vault (vault1)
 
-**Previous:** [Project 18 — Ansible Vault Secrets Audit & Migration (lx1, fleet-wide)](18-ansible-vault-secrets-lx1.md)
+**Previous:** [Project 18 — Ansible Vault (lx1)](18-ansible-vault-secrets-lx1.md)
 **Next:** [Project 20 — Oracle XE Sandbox (ora1)](20-oracle-xe-sandbox-ora1.md)
 
 [← Back to Lab Index](00-pymesis-lab-index.md)
@@ -162,3 +162,7 @@ Raised directly by Santiago after finishing an unrelated project: `vault1`'s bac
 - Project 17 — Terraform/IaC (lx1), the repo `vault1.tf` was added to.
 - Project 10 — GLPI (glpi1), the inventory server `vault1`'s GLPI Agent reports to.
 - Project 9 / 9.1 — Monitoring stack, Zabbix/Wazuh (mon1), the server side of `vault1`'s agents.
+
+---
+
+[← **Previous:** Project 18 — Ansible Vault (lx1)](18-ansible-vault-secrets-lx1.md) | [**Next:** Project 20 — Oracle XE Sandbox (ora1) →](20-oracle-xe-sandbox-ora1.md)

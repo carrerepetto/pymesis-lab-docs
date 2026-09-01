@@ -2,7 +2,7 @@
 title: 01-proxmox-ve-installation
 description: proxmox-ve
 published: 1
-date: 2026-08-28T21:15:49.630Z
+date: 2026-09-01T17:18:35.082Z
 tags: 
 editor: markdown
 dateCreated: 2026-08-27T16:52:28.360Z
@@ -11,7 +11,7 @@ dateCreated: 2026-08-27T16:52:28.360Z
 # Project 1 — Proxmox VE 8.4.1 Installation (node1)
 
 **Previous:** — (first project in the lab)
-**Next:** [Project 1.1 — Ordered Shutdown Script on Proxmox (pve1)](01-1-ordered-shutdown-script.md)
+**Next:** [Project 1.1 — Ordered Shutdown Script (pve1)](01-1-ordered-shutdown-script.md)
 
 [← Back to Lab Index](00-pymesis-lab-index.md)
 
@@ -122,3 +122,7 @@ Once Node 1 already had its first VMs installed and configured (`fw1`, `dc1`, `d
 
 - The management sub-interface for `pve1` on VLAN20 (`10.0.20.9`), needed for the hypervisor itself to manage Docker hosts on that VLAN, was resolved as part of [Project 1.1 — Ordered Shutdown Script](01-1-ordered-shutdown-script.md).
 - "Start at boot" (`onboot`) behavior and VM/LXC boot order were also addressed in Project 1.1, as the counterpart to shutdown order.
+
+---
+
+← **Previous:** — (first project in the lab) | [**Next:** Project 1.1 — Ordered Shutdown Script (pve1) →](01-1-ordered-shutdown-script.md)

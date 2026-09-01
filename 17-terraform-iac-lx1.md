@@ -2,7 +2,7 @@
 title: 17-terraform-iac-lx1
 description: terraform-iac
 published: 1
-date: 2026-08-30T19:11:30.705Z
+date: 2026-09-01T17:40:35.651Z
 tags: 
 editor: markdown
 dateCreated: 2026-08-30T19:11:30.705Z
@@ -204,3 +204,7 @@ Once the exercise was complete, `tf-test1` was destroyed cleanly with a plain `t
 - [Project 16 — Ansible (lx1)](16-ansible-lx1.md) — intended to take over post-provisioning configuration management for anything Terraform provisions going forward.
 - [Project 5.1 — Restic Backup Architecture](05.1-restic-backup-architecture.md) — backs up the local Terraform state file on lx1.
 - [Project 15 — K3s Single-Node (k3s1)](15-k3s-single-node-k3s1.md) — `tf-test1` occupying VMID 118 forced a numbering gap when `k3s1` was created at VMID 119, one of the events that prompted the VMID/IP numbering convention formalized in this project.
+
+---
+
+[← **Previous:** Project 16 — Ansible (lx1)](16-ansible-implementation-lx1.md) | [**Next:** Project 18 — Ansible Vault (lx1) →](18-ansible-vault-secrets-lx1.md)

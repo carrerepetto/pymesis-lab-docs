@@ -2,7 +2,7 @@
 title: 15-k3s-single-node-k3s1
 description: k3s-single-node
 published: 1
-date: 2026-08-30T12:05:14.402Z
+date: 2026-09-01T17:36:48.829Z
 tags: 
 editor: markdown
 dateCreated: 2026-08-30T07:07:05.103Z
@@ -10,8 +10,8 @@ dateCreated: 2026-08-30T07:07:05.103Z
 
 # Project 15 — K3s Single-Node Installation (k3s1)
 
-**Previous:** [Project 14 — Private LLM Installation (llm1)](14-private-llm-llm1.md)
-**Next:** [Project 16 — Ansible Implementation (lx1)](16-ansible-implementation-lx1.md)
+**Previous:** [Project 14 — Private LLM & n8n (llm1,n8n1)](14-private-llm-llm1.md)
+**Next:** [Project 16 — Ansible (lx1)](16-ansible-implementation-lx1.md)
 
 [← Back to Lab Index](00-pymesis-lab-index.md)
 
@@ -96,3 +96,7 @@ Zabbix and Wazuh agents were installed following the fleet-wide pattern. The GLP
 - VMID/IP collision-checking against Terraform's sandbox VMs (`tf-test1`) reflects the two-repo (infra/sandbox) split adopted after the `destroy` incident described in the Terraform/IaC project.
 - HTTPS-via-internal-CA and WebSocket-upgrade-header patterns are the same ones established for GLPI (Project 10), Harbor (Project 11), and later reused for Open WebUI and n8n (Project 14).
 - Backup path convention (`/mnt/backups/repos/<hostname>`, `RESTIC_PASSWORD_FILE`-based cron) is the same lab-wide standard referenced throughout Projects 13–14.
+
+---
+
+[← **Previous:** Project 14 — Private LLM & n8n (llm1,n8n1)](14-private-llm-llm1.md) | [**Next:** Project 16 — Ansible (lx1) →](16-ansible-implementation-lx1.md)

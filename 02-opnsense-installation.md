@@ -2,7 +2,7 @@
 title: 02-opnsense-installation
 description: opnsense
 published: 1
-date: 2026-08-28T21:17:07.398Z
+date: 2026-09-01T17:18:05.592Z
 tags: 
 editor: markdown
 dateCreated: 2026-08-27T16:54:33.588Z
@@ -10,8 +10,8 @@ dateCreated: 2026-08-27T16:54:33.588Z
 
 # Project 2 — OPNsense 26.1.6 Installation (fw1)
 
-**Previous:** [Project 1.1 — Ordered Shutdown Script on Proxmox (pve1)](01-1-ordered-shutdown-script.md)
-**Next:** [Project 3 — Windows Server 2022 Installation (dc1, dc2, fs1)](03-windows-server-2022-dc-fs.md)
+**Previous:** [Project 1.1 — Ordered Shutdown Script (pve1)](01-1-ordered-shutdown-script.md)
+**Next:** [Project 3 — Windows Server (dc1, dc2, fs1)](03-windows-server-2022-dc-fs.md)
 
 [← Back to Lab Index](00-pymesis-lab-index.md)
 
@@ -161,3 +161,7 @@ Since OPNsense's WAN interface receives its address via DHCP from the TP-Link ro
 
 - The backup directory convention (`/mnt/backups/configs/<host>/...` for flat configuration-file backups, separate from Restic's own repository structure) established here on `bk1` is the same one referenced in [Project 1](01-proxmox-ve-installation.md)'s backup discussion.
 - Full VLAN segmentation, once the MikroTik CRS310 arrives, will require revisiting the NAT Port Forwarding setup documented here.
+
+---
+
+[← **Previous:** Project 1.1 — Ordered Shutdown Script (pve1)](01-1-ordered-shutdown-script.md) | [**Next:** Project 3 — Windows Server (dc1, dc2, fs1) →](03-windows-server-2022-dc-fs.md)

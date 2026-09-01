@@ -2,7 +2,7 @@
 title: 04-ubuntu-2204-lx1
 description: ubuntu-2204
 published: 1
-date: 2026-08-28T21:46:46.384Z
+date: 2026-09-01T17:11:17.545Z
 tags: 
 editor: markdown
 dateCreated: 2026-08-27T22:38:04.620Z
@@ -10,8 +10,8 @@ dateCreated: 2026-08-27T22:38:04.620Z
 
 # Project 4 — Ubuntu 22.04 Installation (lx1)
 
-**Previous:** [Project 3 — Windows Server 2022 Installation (dc1, dc2, fs1)](03-windows-server-2022-dc-fs.md)
-**Next:** [Project 5 — Debian 13 Installation (bk1)](05-debian13-bk1.md)
+**Previous:** [Project 3 — Windows Server (dc1, dc2, fs1)](03-windows-server-2022-dc-fs.md)
+**Next:** [Project 5 — Backup Server (bk1)](05-debian13-bk1.md)
 
 [← Back to Lab Index](00-pymesis-lab-index.md)
 
@@ -295,3 +295,7 @@ With `lx1` complete, Node 1 was fully closed out except for `fw1`'s pending VPN/
 - DNS records for `lx1` and its four service subdomains were added on `dc1`, per [Project 3](03-windows-server-2022-dc-fs.md)'s DNS server.
 - The HTTPS certificate for `lx1` was signed by the same `pymesis-DC01-CA` (AD CS on `dc1`) used for other lab services (Odoo, the app1 intranet).
 - Backup conventions (Restic to `bk1`, per-OS schedule) mirror the fleet-wide pattern defined in the [Lab Index](00-pymesis-lab-index.md) and first documented in [Project 3](03-windows-server-2022-dc-fs.md).
+
+---
+
+[← **Previous:** Project 3 — Windows Server (dc1, dc2, fs1)](03-windows-server-2022-dc-fs.md)) | [**Next:** Project 5 — Backup Server (bk1) →](05-debian13-bk1.md)

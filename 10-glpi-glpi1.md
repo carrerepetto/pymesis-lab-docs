@@ -2,7 +2,7 @@
 title: 10-glpi-glpi1
 description: glpi
 published: 1
-date: 2026-08-30T07:31:47.801Z
+date: 2026-09-01T17:28:00.870Z
 tags: 
 editor: markdown
 dateCreated: 2026-08-28T21:02:03.427Z
@@ -10,8 +10,8 @@ dateCreated: 2026-08-28T21:02:03.427Z
 
 # Project 10 — GLPI Installation (glpi1)
 
-**Previous:** [Project 9 — Rocky Linux 9.4 Installation (mon1)](09-rocky-mon01.md)
-**Next:** [Project 11 — Harbor and CI/CD Installation (hr1)](11-harbor-cicd-hr1.md)
+**Previous:** [Project 9 — Monitoring/SecOps (mon1)](09-rocky-mon01.md)
+**Next:** [Project 11 — Registry + CI/CD (hr1)](11-harbor-cicd-hr1.md)
 
 [← Back to Lab Index](00-pymesis-lab-index.md)
 
@@ -153,4 +153,4 @@ No outstanding pending items remain for GLPI1 itself.
 
 ---
 
-**Previous:** Project 9 — Rocky Linux 9.4 (MON01) | **Next:** Project 11 — Harbor + CI/CD (HR1)
+[← **Previous:** Project 9 — Monitoring/SecOps (mon1)](09-rocky-mon01.md) | [**Next:** Project 11 — Registry + CI/CD (hr1) →](11-harbor-cicd-hr1.md)

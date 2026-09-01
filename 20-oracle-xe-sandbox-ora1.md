@@ -2,7 +2,7 @@
 title: 20-oracle-xe-sandbox-ora1
 description: oracle-xe-sandbox
 published: 1
-date: 2026-08-31T11:40:12.540Z
+date: 2026-09-01T17:46:41.987Z
 tags: 
 editor: markdown
 dateCreated: 2026-08-31T11:37:38.616Z
@@ -11,7 +11,7 @@ dateCreated: 2026-08-31T11:37:38.616Z
 # Project 20 — Oracle XE Sandbox (ora1)
 
 **Previous:** [Project 19 — HashiCorp Vault (vault1)](19-hashicorp-vault-vault1.md)
-**Next:** [Project 21 — IBM DB2 (lx1)](21-ibm-db2-lx1.md)
+**Next:** [Project 21 — IBM Db2 (lx1)](21-ibm-db2-lx1.md)
 
 [← Back to Lab Index](00-pymesis-lab-index.md)
 
@@ -148,3 +148,7 @@ Raised by Santiago after the project was otherwise considered complete: agents w
 - Project 9 / 9.1 — Monitoring stack, Zabbix/Wazuh (mon1), the server side of `ora1`'s agents.
 - Project 5 / 5.1 — Backups, Restic (bk1), the destination for `ora1`'s RMAN backups.
 - Project 21 — IBM DB2 (lx1), the next sandbox database project.
+
+---
+
+[← **Previous:** Project 19 — HashiCorp Vault (vault1)](19-hashicorp-vault-vault1.md) | [**Next:** Project 21 — IBM Db2 (lx1) →](21-ibm-db2-lx1.md)
