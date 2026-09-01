@@ -1,0 +1,12 @@
+---
+- name: Clear plaintext secrets from sadmin bash history
+  hosts: all:!windows:!firewall:!client
+  gather_facts: false
+  tasks:
+    - name: Truncate .bash_history
+      ansible.builtin.copy:
+        content: ""
+        dest: /home/sadmin/.bash_history
+        owner: sadmin
+        group: sadmin
+        mode: '0600'

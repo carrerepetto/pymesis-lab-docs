@@ -1,0 +1,22 @@
+---
+- name: Dar a Administrator acceso SSH hacia bk1 (para restic)
+  hosts: windows
+  tasks:
+    - name: Generar keypair ed25519 para Administrator (si no existe)
+      ansible.windows.win_shell: |
+        if (!(Test-Path "$env:USERPROFILE\.ssh\id_ed25519")) {
+          ssh-keygen.exe -t ed25519 -f "$env:USERPROFILE\.ssh\id_ed25519" -N '""'
+        }
+
+    - name: Leer clave pública de Administrator
+      ansible.windows.win_shell: "Get-Content $env:USERPROFILE\\.ssh\\id_ed25519.pub"
+      register: admin_pubkey_result
+      changed_when: false
+
+    - name: Autorizar la clave de Administrator en bk1 (como sadmin)
+      delegate_to: bk1
+      become: false
+      ansible.posix.authorized_key:
+        user: sadmin
+        key: "{{ admin_pubkey_result.stdout }}"
+        state: present

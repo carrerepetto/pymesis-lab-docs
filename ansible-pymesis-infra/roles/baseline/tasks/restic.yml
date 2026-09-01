@@ -1,0 +1,92 @@
+---
+- name: Instalar restic (Debian/Ubuntu)
+  ansible.builtin.apt:
+    name: restic
+    state: present
+    update_cache: true
+  when: ansible_os_family == "Debian"
+
+- name: Habilitar CodeReady Builder (RHEL)
+  community.general.rhsm_repository:
+    name: codeready-builder-for-rhel-9-x86_64-rpms
+    state: enabled
+  when: ansible_distribution == "RedHat"
+
+- name: Instalar EPEL (Rocky)
+  ansible.builtin.dnf:
+    name: epel-release
+    state: present
+  when: ansible_distribution == "Rocky"
+
+- name: Instalar EPEL (RHEL)
+  ansible.builtin.dnf:
+    name: "https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm"
+    state: present
+    disable_gpg_check: true
+  when: ansible_distribution == "RedHat"
+
+- name: Instalar restic (RedHat/Rocky)
+  ansible.builtin.dnf:
+    name: restic
+    state: present
+    update_cache: true
+  when: ansible_os_family == "RedHat"
+
+- name: Crear directorio de scripts custom
+  ansible.builtin.file:
+    path: /opt/scripts
+    state: directory
+    owner: "{{ sadmin_user }}"
+    group: root
+    mode: '0755'
+  when: restic_pre_backup_script is defined
+
+- name: Desplegar script de pre-backup custom (si está definido)
+  ansible.builtin.copy:
+    src: "{{ restic_pre_backup_script }}"
+    dest: "/opt/scripts/{{ restic_pre_backup_script }}"
+    owner: "{{ sadmin_user }}"
+    group: root
+    mode: '0750'
+  when: restic_pre_backup_script is defined
+
+- name: Desplegar archivo de password de restic
+  ansible.builtin.copy:
+    content: "{{ restic_password }}"
+    dest: /etc/restic_password
+    owner: "{{ sadmin_user }}"
+    group: root
+    mode: '0600'
+
+- name: Desplegar script de backup
+  ansible.builtin.template:
+    src: backup.sh.j2
+    dest: /usr/local/bin/backup.sh
+    owner: "{{ sadmin_user }}"
+    group: root
+    mode: '0755'
+
+- name: Verificar si el repo restic ya existe
+  ansible.builtin.shell: "restic -r {{ restic_repo }} snapshots"
+  environment:
+    RESTIC_PASSWORD_FILE: /etc/restic_password
+  register: restic_check
+  changed_when: false
+  failed_when: false
+
+- name: Inicializar repo restic (solo si no existe)
+  ansible.builtin.shell: "restic -r {{ restic_repo }} init"
+  environment:
+    RESTIC_PASSWORD_FILE: /etc/restic_password
+  when: restic_check.rc != 0
+  register: restic_init
+  changed_when: "'created restic repository' in restic_init.stdout"
+  failed_when: restic_init.rc != 0 and 'already initialized' not in restic_init.stderr
+
+- name: Programar cron de backup semanal (domingo 03:00)
+  ansible.builtin.cron:
+    name: "restic backup {{ inventory_hostname }}"
+    weekday: "0"
+    hour: "3"
+    minute: "0"
+    job: "/usr/local/bin/backup.sh"

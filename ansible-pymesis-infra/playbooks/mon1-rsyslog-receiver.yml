@@ -1,0 +1,43 @@
+---
+- name: Configurar receptor rsyslog remoto en mon1
+  hosts: mon1
+  become: true
+  tasks:
+    - name: Desplegar config de receptor rsyslog remoto
+      ansible.builtin.copy:
+        dest: /etc/rsyslog.d/10-remote-receiver.conf
+        content: |
+          module(load="imtcp")
+          input(type="imtcp" port="514")
+
+          template(name="RemoteLogs" type="string" string="/var/log/remote/%HOSTNAME%/%PROGRAMNAME%.log")
+
+          if $fromhost-ip != '127.0.0.1' then {
+              action(type="omfile" dynaFile="RemoteLogs")
+              stop
+          }
+        owner: root
+        group: root
+        mode: '0644'
+      notify: restart rsyslog
+
+    - name: Crear directorio de logs remotos
+      ansible.builtin.file:
+        path: /var/log/remote
+        state: directory
+        owner: root
+        group: root
+        mode: '0750'
+
+    - name: Abrir puerto 514/tcp en firewalld
+      ansible.posix.firewalld:
+        port: 514/tcp
+        permanent: true
+        immediate: true
+        state: enabled
+
+  handlers:
+    - name: restart rsyslog
+      ansible.builtin.systemd:
+        name: rsyslog
+        state: restarted

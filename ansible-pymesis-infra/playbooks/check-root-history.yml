@@ -1,0 +1,14 @@
+---
+- name: Check root .bash_history for leaked secrets
+  hosts: all:!windows:!firewall:!client
+  gather_facts: false
+  tasks:
+    - name: Grep root's bash_history
+      ansible.builtin.shell: grep -iE 'password|token|secret' /root/.bash_history 2>/dev/null
+      register: root_hist
+      changed_when: false
+      failed_when: false
+    - name: Show results
+      ansible.builtin.debug:
+        msg: "{{ root_hist.stdout_lines }}"
+      when: root_hist.stdout != ""

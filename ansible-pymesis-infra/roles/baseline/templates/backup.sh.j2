@@ -1,0 +1,46 @@
+#!/bin/bash
+# Generado por Ansible (role: baseline) - NO editar manualmente
+set -uo pipefail
+
+export RESTIC_REPOSITORY="{{ restic_repo }}"
+export RESTIC_PASSWORD_FILE=/etc/restic_password
+
+LOG="/var/log/restic_backup.log"
+DUMP_DIR="{{ restic_dump_dir }}"
+DATE=$(date +%F)
+
+echo "[$(date)] === Iniciando backup {{ inventory_hostname | upper }} ===" >> "$LOG"
+
+{% if restic_docker_volumes %}
+echo "[$(date)] Volcando volúmenes Docker..." >> "$LOG"
+for vol in {{ restic_docker_volumes | join(' ') }}; do
+  if docker volume inspect "$vol" >/dev/null 2>&1; then
+    docker run --rm -v ${vol}:/data -v ${DUMP_DIR}:/backup alpine \
+      tar czf /backup/${vol}_${DATE}.tar.gz -C /data . 2>> "$LOG"
+    echo "[$(date)] Volumen $vol respaldado" >> "$LOG"
+  else
+    echo "[$(date)] WARNING: volumen $vol no existe" >> "$LOG"
+  fi
+done
+{% endif %}
+
+{% if restic_pre_backup_cmd %}
+echo "[$(date)] {{ restic_pre_backup_desc }}..." >> "$LOG"
+{{ restic_pre_backup_cmd }} >> "$LOG" 2>&1
+if [ $? -ne 0 ]; then
+  echo "[$(date)] ERROR: pre-backup falló, abortando" >> "$LOG"
+  exit 1
+fi
+{% endif %}
+
+echo "[$(date)] Ejecutando restic backup..." >> "$LOG"
+restic backup --tag "{{ inventory_hostname }}" --tag "auto" {{ restic_backup_paths | join(' ') }} {% for e in restic_excludes %}--exclude {{ e }} {% endfor %}>> "$LOG" 2>&1
+
+{% if restic_dump_cleanup_pattern %}
+find "$DUMP_DIR" -name "{{ restic_dump_cleanup_pattern }}" -mtime +2 -delete
+{% endif %}
+
+echo "[$(date)] Aplicando retención..." >> "$LOG"
+restic forget --keep-weekly {{ restic_keep_weekly }} --keep-monthly {{ restic_keep_monthly }} --prune >> "$LOG" 2>&1
+
+echo "[$(date)] === Backup {{ inventory_hostname | upper }} completado ===" >> "$LOG"

@@ -1,0 +1,20 @@
+restic_backup_paths:
+  - /etc
+  - /home
+  - /opt
+  - /var/log
+restic_excludes:
+  - /var/log/journal
+  - /proc
+  - /sys
+  - /dev
+  - /run
+restic_dump_dir: /opt/backup_dumps
+restic_dump_cleanup_pattern: ""
+restic_pre_backup_cmd: ""
+restic_pre_backup_desc: "Ejecutando pre-backup"
+restic_docker_volumes: []
+skip_wazuh_agent: false
+skip_glpi_agent: false
+glpi_agent_version: "1.18"
+glpi_server_fqdn: "glpi1.pymesis.lab"

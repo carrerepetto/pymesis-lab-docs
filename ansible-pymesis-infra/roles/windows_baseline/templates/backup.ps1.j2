@@ -1,0 +1,31 @@
+$env:Path = [Environment]::GetEnvironmentVariable("Path", "Machine")
+$env:HOME = $env:USERPROFILE
+$REPO = "{{ restic_repo }}"
+$PASSFILE = "C:\Restic\restic_password.txt"
+$LOG = "C:\Restic\backup.log"
+
+Add-Content $LOG "[$(Get-Date)] === Iniciando backup {{ inventory_hostname | upper }} ==="
+
+{% if restic_pre_backup_type == "ifm" %}
+$IFMDir = "C:\IFM"
+if (Test-Path $IFMDir) { Remove-Item $IFMDir -Recurse -Force }
+Add-Content $LOG "[$(Get-Date)] Creando snapshot IFM (ntdsutil)..."
+$ifmCmds = "activate instance ntds`r`nifm`r`ncreate sysvol full $IFMDir`r`nquit`r`nquit`r`n"
+$ifmCmds | ntdsutil | Out-File -Append $LOG
+{% elif restic_pre_backup_type == "sql_dump" %}
+New-Item -ItemType Directory -Path "{{ restic_dump_dir }}" -Force | Out-Null
+Add-Content $LOG "[$(Get-Date)] Dump de bases SQL Server..."
+$Databases = Invoke-Sqlcmd -Query "SELECT name FROM sys.databases WHERE database_id > 4"
+foreach ($db in $Databases) {
+    $dumpFile = "{{ restic_dump_dir }}\$($db.name).bak"
+    Invoke-Sqlcmd -Query "BACKUP DATABASE [$($db.name)] TO DISK='$dumpFile' WITH FORMAT"
+}
+{% endif %}
+
+Add-Content $LOG "[$(Get-Date)] Ejecutando restic backup..."
+restic --repo $REPO --password-file $PASSFILE backup --tag "{{ inventory_hostname }}" --tag "auto" {% for p in restic_backup_paths %}"{{ p }}" {% endfor %}2>> $LOG
+
+Add-Content $LOG "[$(Get-Date)] Aplicando retención..."
+restic --repo $REPO --password-file $PASSFILE forget --keep-weekly 4 --keep-monthly 6 --prune 2>> $LOG
+
+Add-Content $LOG "[$(Get-Date)] === Backup {{ inventory_hostname | upper }} completado ==="

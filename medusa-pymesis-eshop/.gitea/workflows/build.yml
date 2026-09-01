@@ -1,0 +1,39 @@
+name: build-and-push
+on:
+  push:
+    branches: [main]
+jobs:
+  build-backend:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Login a Harbor
+        run: echo "${{ secrets.HARBOR_TOKEN }}" | docker login hr1.pymesis.lab -u '${{ secrets.HARBOR_USER }}' --password-stdin
+      - name: Build imagen backend
+        run: docker build -f apps/backend/Dockerfile -t hr1.pymesis.lab/pymesis/es1-backend:${{ gitea.sha }} -t hr1.pymesis.lab/pymesis/es1-backend:latest .
+      - name: Push backend a Harbor
+        run: |
+          docker push hr1.pymesis.lab/pymesis/es1-backend:${{ gitea.sha }}
+          docker push hr1.pymesis.lab/pymesis/es1-backend:latest
+      - name: Limpiar imágenes viejas
+        run: docker image prune -af --filter "until=24h" --filter "label!=keep=true"
+
+  build-storefront:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Login a Harbor
+        run: echo "${{ secrets.HARBOR_TOKEN }}" | docker login hr1.pymesis.lab -u '${{ secrets.HARBOR_USER }}' --password-stdin
+      - name: Build imagen storefront
+        run: |
+          docker build -f apps/storefront/Dockerfile \
+            --build-arg NEXT_PUBLIC_MEDUSA_PUBLISHABLE_KEY=${{ secrets.MEDUSA_PUBLISHABLE_KEY }} \
+            --build-arg NEXT_PUBLIC_MEDUSA_BACKEND_URL=https://es1.pymesis.lab \
+            -t hr1.pymesis.lab/pymesis/es1-storefront:${{ gitea.sha }} \
+            -t hr1.pymesis.lab/pymesis/es1-storefront:latest .
+      - name: Push storefront a Harbor
+        run: |
+          docker push hr1.pymesis.lab/pymesis/es1-storefront:${{ gitea.sha }}
+          docker push hr1.pymesis.lab/pymesis/es1-storefront:latest
+      - name: Limpiar imágenes viejas
+        run: docker image prune -af --filter "until=24h" --filter "label!=keep=true"

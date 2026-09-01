@@ -1,0 +1,7 @@
+restic_pre_backup_type: "ifm"
+restic_backup_paths:
+  - C:\IFM
+  - C:\Windows\System32\config
+  - C:\Windows\System32\inetsrv\config
+  - C:\Certs
+  - C:\inetpub

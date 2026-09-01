@@ -1,0 +1,6 @@
+---
+- name: Aplicar baseline a todas las VMs
+  hosts: proxmox_all_qemu:proxmox_all_lxc:!windows:!firewall:!client
+  become: true
+  roles:
+    - baseline

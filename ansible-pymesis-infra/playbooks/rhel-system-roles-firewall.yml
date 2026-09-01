@@ -1,0 +1,39 @@
+---
+- name: Configurar firewall en rhel1 vía RHEL System Roles
+  hosts: rhel1
+  become: true
+  vars:
+    firewall:
+      - zone: public
+        service: ["dhcpv6-client"]
+        port: ["9090/tcp"]
+        state: enabled
+        permanent: true
+        runtime: true
+      - zone: public
+        service: ["cockpit", "ssh"]
+        state: disabled
+        permanent: true
+        runtime: true
+      - zone: public
+        port: ["10050/tcp"]
+        state: enabled
+        permanent: true
+        runtime: true
+      - zone: public
+        rich_rule: 'rule family="ipv4" source address="10.0.20.40" service name="ssh" accept'
+        state: enabled
+        permanent: true
+        runtime: true
+      - zone: public
+        service: ["freeipa-ldap", "freeipa-ldaps", "freeipa-4"]
+        state: enabled
+        permanent: true
+        runtime: true
+      - zone: public
+        service: ["samba", "samba-dc"]
+        state: enabled
+        permanent: true
+        runtime: true
+  roles:
+    - fedora.linux_system_roles.firewall

@@ -1,0 +1,12 @@
+---
+- name: Configurar timesync en rhel1 vía RHEL System Roles
+  hosts: rhel1
+  become: true
+  vars:
+    timesync_ntp_servers:
+      - hostname: dc1.pymesis.lab
+        iburst: true
+      - hostname: dc2.pymesis.lab
+        iburst: true
+  roles:
+    - fedora.linux_system_roles.timesync

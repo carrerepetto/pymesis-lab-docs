@@ -1,0 +1,16 @@
+proxmox_api_url: "https://10.0.20.9:8006"
+proxmox_ansible_token: "{{ vault_proxmox_ansible_token }}"
+
+# Baseline convenciones
+sadmin_user: sadmin
+target_timezone: Europe/Rome
+zabbix_server_ip: "10.0.20.60"
+wazuh_manager_ip: "10.0.20.60"
+restic_backup_host: "bk1"
+restic_password: "{{ vault_restic_password }}"
+restic_keep_weekly: 4
+restic_keep_monthly: 6
+restic_repo: "sftp:{{ sadmin_user }}@{{ restic_backup_host }}:/mnt/backups/repos/{{ inventory_hostname }}"
+ansible_user: sadmin
+ansible_become: true
+ansible_become_method: sudo

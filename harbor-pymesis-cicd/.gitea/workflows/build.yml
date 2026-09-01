@@ -1,0 +1,19 @@
+name: build-and-push
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Login a Harbor
+        run: echo "${{ secrets.HARBOR_TOKEN }}" | docker login hr1.pymesis.lab -u '${{ secrets.HARBOR_USER }}' --password-stdin
+
+      - name: Build imagen
+        run: docker build -t hr1.pymesis.lab/pymesis/demo:${{ gitea.sha }} .
+
+      - name: Push a Harbor
+        run: docker push hr1.pymesis.lab/pymesis/demo:${{ gitea.sha }}

@@ -1,0 +1,20 @@
+---
+- name: Configurar red en rhel1 vía RHEL System Roles
+  hosts: rhel1
+  become: true
+  vars:
+    network_connections:
+      - name: enp6s18
+        interface_name: enp6s18
+        type: ethernet
+        state: up
+        ip:
+          address:
+            - 10.0.20.97/24
+          gateway4: 10.0.20.1
+          dns:
+            - 10.0.20.10
+          dns_search:
+            - pymesis.lab
+  roles:
+    - fedora.linux_system_roles.network

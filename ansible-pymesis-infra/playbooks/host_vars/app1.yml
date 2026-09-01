@@ -1,0 +1,7 @@
+restic_pre_backup_type: "sql_dump"
+restic_backup_paths:
+  - C:\inetpub
+  - D:\AppData
+  - C:\Restic\sqldumps
+  - C:\Certs
+  - C:\Windows\System32\inetsrv\config

@@ -1,0 +1,71 @@
+---
+- name: Configurar timezone
+  community.windows.win_timezone:
+    timezone: "W. Europe Standard Time"
+
+- name: Configurar zabbix_agentd.conf - Server
+  community.windows.win_lineinfile:
+    path: 'C:\Program Files\Zabbix Agent\zabbix_agentd.conf'
+    regexp: '^Server='
+    line: "Server={{ zabbix_server_ip }}"
+  notify: restart zabbix agent windows
+
+- name: Configurar zabbix_agentd.conf - ServerActive
+  community.windows.win_lineinfile:
+    path: 'C:\Program Files\Zabbix Agent\zabbix_agentd.conf'
+    regexp: '^ServerActive='
+    line: "ServerActive={{ zabbix_server_ip }}"
+  notify: restart zabbix agent windows
+
+- name: Configurar zabbix_agentd.conf - Hostname
+  community.windows.win_lineinfile:
+    path: 'C:\Program Files\Zabbix Agent\zabbix_agentd.conf'
+    regexp: '^Hostname='
+    line: "Hostname={{ inventory_hostname }}"
+  notify: restart zabbix agent windows
+
+- name: Asegurar que Zabbix Agent esté activo
+  ansible.windows.win_service:
+    name: "Zabbix Agent"
+    state: started
+
+- name: Asegurar que Wazuh esté activo
+  ansible.windows.win_service:
+    name: WazuhSvc
+    state: started
+
+- name: Asegurar que GLPI Agent esté activo
+  ansible.windows.win_service:
+    name: glpi-agent
+    state: started
+
+- name: Crear directorio C:\Restic
+  ansible.windows.win_file:
+    path: 'C:\Restic'
+    state: directory
+
+- name: Desplegar archivo de password de restic
+  ansible.windows.win_copy:
+    content: "{{ restic_password }}"
+    dest: 'C:\Restic\restic_password.txt'
+
+- name: Desplegar script de backup
+  ansible.windows.win_template:
+    src: backup.ps1.j2
+    dest: 'C:\Restic\backup.ps1'
+
+- name: Programar tarea de backup semanal (domingo 03:00)
+  community.windows.win_scheduled_task:
+    name: "Restic Backup"
+    actions:
+      - path: PowerShell.exe
+        arguments: '-NonInteractive -WindowStyle Hidden -ExecutionPolicy Bypass -File C:\Restic\backup.ps1'
+    triggers:
+      - type: weekly
+        start_boundary: '2026-01-04T02:30:00'
+        days_of_week: sunday
+    username: "{{ ansible_user }}"
+    password: "{{ ansible_password }}"
+    run_level: highest
+    state: present
+    enabled: true

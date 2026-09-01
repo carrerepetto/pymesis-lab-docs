@@ -1,0 +1,5 @@
+---
+- name: Aplicar baseline a las VMs Windows
+  hosts: windows
+  roles:
+    - windows_baseline

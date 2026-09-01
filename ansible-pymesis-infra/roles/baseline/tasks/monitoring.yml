@@ -1,0 +1,143 @@
+---
+- name: Instalar zabbix-agent2 (Debian/Ubuntu)
+  ansible.builtin.apt:
+    name: zabbix-agent2
+    state: present
+    update_cache: true
+  when: ansible_os_family == "Debian"
+
+- name: Instalar repo oficial de Zabbix (Rocky)
+  ansible.builtin.dnf:
+    name: "https://repo.zabbix.com/zabbix/7.0/rocky/9/x86_64/zabbix-release-latest-7.0.el9.noarch.rpm"
+    state: present
+    disable_gpg_check: true
+  when: ansible_distribution == "Rocky"
+
+- name: Instalar repo oficial de Zabbix (RHEL)
+  ansible.builtin.dnf:
+    name: "https://repo.zabbix.com/zabbix/7.0/rhel/9/x86_64/zabbix-release-latest-7.0.el9.noarch.rpm"
+    state: present
+    disable_gpg_check: true
+  when: ansible_distribution == "RedHat"
+
+- name: Instalar zabbix-agent2 (RedHat/Rocky)
+  ansible.builtin.dnf:
+    name: zabbix-agent2
+    state: present
+    update_cache: true
+  when: ansible_os_family == "RedHat"
+
+- name: Configurar zabbix_agent2.conf - Server
+  ansible.builtin.lineinfile:
+    path: /etc/zabbix/zabbix_agent2.conf
+    regexp: '^Server='
+    line: "Server={{ zabbix_server_ip }}"
+  notify: restart zabbix-agent2
+
+- name: Configurar zabbix_agent2.conf - ServerActive
+  ansible.builtin.lineinfile:
+    path: /etc/zabbix/zabbix_agent2.conf
+    regexp: '^ServerActive='
+    line: "ServerActive={{ zabbix_server_ip }}"
+  notify: restart zabbix-agent2
+
+- name: Configurar zabbix_agent2.conf - Hostname
+  ansible.builtin.lineinfile:
+    path: /etc/zabbix/zabbix_agent2.conf
+    regexp: '^Hostname='
+    line: "Hostname={{ inventory_hostname }}"
+  notify: restart zabbix-agent2
+
+- name: Asegurar que zabbix-agent2 esté activo
+  ansible.builtin.systemd:
+    name: zabbix-agent2
+    state: started
+    enabled: true
+
+- name: Agregar la clave GPG del repo de Wazuh (Debian)
+  ansible.builtin.apt_key:
+    url: https://packages.wazuh.com/key/GPG-KEY-WAZUH
+    state: present
+  when: not skip_wazuh_agent and ansible_os_family == "Debian"
+
+- name: Agregar el repositorio de Wazuh (Debian)
+  ansible.builtin.apt_repository:
+    repo: "deb https://packages.wazuh.com/4.x/apt/ stable main"
+    filename: wazuh
+    state: present
+  when: not skip_wazuh_agent and ansible_os_family == "Debian"
+
+- name: Instalar wazuh-agent (Debian)
+  ansible.builtin.apt:
+    name: wazuh-agent
+    state: present
+    update_cache: true
+  when: not skip_wazuh_agent and ansible_os_family == "Debian"
+
+- name: Agregar la clave GPG del repo de Wazuh (RedHat)
+  ansible.builtin.rpm_key:
+    key: https://packages.wazuh.com/key/GPG-KEY-WAZUH
+    state: present
+  when: not skip_wazuh_agent and ansible_os_family == "RedHat"
+
+- name: Agregar el repositorio de Wazuh (RedHat)
+  ansible.builtin.yum_repository:
+    name: wazuh
+    description: Wazuh repo
+    baseurl: https://packages.wazuh.com/4.x/yum/
+    gpgcheck: true
+    gpgkey: https://packages.wazuh.com/key/GPG-KEY-WAZUH
+    enabled: true
+  when: not skip_wazuh_agent and ansible_os_family == "RedHat"
+
+- name: Instalar wazuh-agent (RedHat)
+  ansible.builtin.dnf:
+    name: wazuh-agent
+    state: present
+    update_cache: true
+  when: not skip_wazuh_agent and ansible_os_family == "RedHat"
+
+- name: Configurar IP del manager en ossec.conf
+  ansible.builtin.lineinfile:
+    path: /var/ossec/etc/ossec.conf
+    regexp: '<address>.*</address>'
+    line: "    <address>{{ wazuh_manager_ip }}</address>"
+  when: not skip_wazuh_agent
+  notify: restart wazuh-agent
+
+- name: Verificar si el agente Wazuh ya está enrolado
+  ansible.builtin.stat:
+    path: /var/ossec/etc/client.keys
+  register: wazuh_keys
+  when: not skip_wazuh_agent
+
+- name: Enrolar el agente Wazuh contra el manager (solo si no está enrolado)
+  ansible.builtin.command: "/var/ossec/bin/agent-auth -m {{ wazuh_manager_ip }}"
+  when: not skip_wazuh_agent and (not wazuh_keys.stat.exists or wazuh_keys.stat.size == 0)
+
+- name: Asegurar que wazuh-agent esté activo
+  ansible.builtin.systemd:
+    name: wazuh-agent
+    state: started
+    enabled: true
+  when: not skip_wazuh_agent
+
+- name: Descargar el instalador de GLPI Agent
+  ansible.builtin.get_url:
+    url: "https://github.com/glpi-project/glpi-agent/releases/download/{{ glpi_agent_version }}/glpi-agent-{{ glpi_agent_version }}-linux-installer.pl"
+    dest: "/tmp/glpi-agent-{{ glpi_agent_version }}-linux-installer.pl"
+    mode: '0755'
+  when: not skip_glpi_agent
+
+- name: Instalar GLPI Agent
+  ansible.builtin.command: "/tmp/glpi-agent-{{ glpi_agent_version }}-linux-installer.pl --install --server=https://{{ glpi_server_fqdn }}/front/inventory.php --no-question --silent"
+  args:
+    creates: /usr/bin/glpi-agent
+  when: not skip_glpi_agent
+
+- name: Asegurar que glpi-agent esté activo
+  ansible.builtin.systemd:
+    name: glpi-agent
+    state: started
+    enabled: true
+  when: not skip_glpi_agent

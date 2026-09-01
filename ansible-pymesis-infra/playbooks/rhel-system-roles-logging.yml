@@ -1,0 +1,19 @@
+---
+- name: Configurar logging en rhel1 vía RHEL System Roles
+  hosts: rhel1
+  become: true
+  vars:
+    logging_inputs:
+      - name: system_input
+        type: basics
+    logging_outputs:
+      - name: remote_mon1
+        type: forwards
+        target: mon1.pymesis.lab
+        tcp_port: 514
+    logging_flows:
+      - name: flow_remote
+        inputs: [system_input]
+        outputs: [remote_mon1]
+  roles:
+    - fedora.linux_system_roles.logging

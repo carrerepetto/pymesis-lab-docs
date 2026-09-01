@@ -1,0 +1,12 @@
+---
+- name: Sistema base (QEMU agent, sadmin, timezone)
+  import_tasks: system.yml
+  tags: [system]
+
+- name: Agentes de monitoreo (Zabbix, Wazuh, GLPI)
+  import_tasks: monitoring.yml
+  tags: [monitoring]
+
+- name: Backup con Restic
+  import_tasks: restic.yml
+  tags: [restic]
